@@ -1,0 +1,5 @@
+subgraphs:
+  core:
+    routing_url: http://core/graphql
+    schema:
+      subgraph_url: http://localhost:3001/graphql

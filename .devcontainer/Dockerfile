@@ -19,3 +19,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # and the actual installation
     && apt-get update \
     && apt-get -y install fish ffmpeg vim helm docker-ce docker-ce-cli containerd.io kubectl
+
+USER node
+
+# Install rust
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y \
+    && $HOME/.cargo/bin/cargo install cargo-edit

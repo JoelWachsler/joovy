@@ -1,0 +1,988 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create tracker for playlist 1`] = `
+Array [
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "commandCalled": "/play",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "created",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "meta": Object {
+            "name": "channel",
+            "version": "1",
+          },
+          "playlists": Array [
+            "totally-random-uuid-0",
+          ],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "date": 949363200000,
+          "meta": Object {
+            "name": "playlist",
+            "version": "1",
+          },
+          "tracks": Array [],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "date": 949363200000,
+          "meta": Object {
+            "name": "playlist",
+            "version": "1",
+          },
+          "tracks": Array [
+            Object {
+              "author": Object {
+                "id": "testAuthorId",
+                "meta": Object {
+                  "name": "author",
+                  "version": "1",
+                },
+                "username": "testuser",
+              },
+              "link": "https://test.com",
+              "meta": Object {
+                "name": "track",
+                "version": "1",
+              },
+              "name": "[test (1:10)](https://test.com) [<@testAuthorId>]",
+            },
+          ],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"[test (1:10)](https://test.com) [<@testAuthorId>] has been added to the queue\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"Now playing: [test (1:10)](https://test.com) [<@testAuthorId>]\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 5,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "player": "idle",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 5,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"End of playlist, will disconnect in 5 minutes.\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+]
+`;
+
+exports[`should differentiate tracking between playlists 1`] = `
+Array [
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "commandCalled": "/play",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "created",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "meta": Object {
+            "name": "channel",
+            "version": "1",
+          },
+          "playlists": Array [
+            "totally-random-uuid-0",
+          ],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "date": 949363200000,
+          "meta": Object {
+            "name": "playlist",
+            "version": "1",
+          },
+          "tracks": Array [],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "date": 949363200000,
+          "meta": Object {
+            "name": "playlist",
+            "version": "1",
+          },
+          "tracks": Array [
+            Object {
+              "author": Object {
+                "id": "testAuthorId",
+                "meta": Object {
+                  "name": "author",
+                  "version": "1",
+                },
+                "username": "testuser",
+              },
+              "link": "https://test.com",
+              "meta": Object {
+                "name": "track",
+                "version": "1",
+              },
+              "name": "[test (1:10)](https://test.com) [<@testAuthorId>]",
+            },
+          ],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"[test (1:10)](https://test.com) [<@testAuthorId>] has been added to the queue\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"Now playing: [test (1:10)](https://test.com) [<@testAuthorId>]\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 1,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "disconnect": "test",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 1,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "disconnected",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 1,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "store": Object {
+          "event": "removed",
+          "id": "testChannelId",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 1,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"Bye!\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "commandCalled": "/play",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "created",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "meta": Object {
+            "name": "channel",
+            "version": "1",
+          },
+          "playlists": Array [
+            "totally-random-uuid-0",
+            "totally-random-uuid-1",
+          ],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "date": 949363200000,
+          "meta": Object {
+            "name": "playlist",
+            "version": "1",
+          },
+          "tracks": Array [],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "date": 949363200000,
+          "meta": Object {
+            "name": "playlist",
+            "version": "1",
+          },
+          "tracks": Array [
+            Object {
+              "author": Object {
+                "id": "testAuthorId",
+                "meta": Object {
+                  "name": "author",
+                  "version": "1",
+                },
+                "username": "testuser",
+              },
+              "link": "https://test.com",
+              "meta": Object {
+                "name": "track",
+                "version": "1",
+              },
+              "name": "[test (1:10)](https://test.com) [<@testAuthorId>]",
+            },
+          ],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"[test (1:10)](https://test.com) [<@testAuthorId>] has been added to the queue\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"Now playing: [test (1:10)](https://test.com) [<@testAuthorId>]\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 7,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "player": "idle",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 7,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"End of playlist, will disconnect in 5 minutes.\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+]
+`;
+
+exports[`should track multiple tracks in the same playlist 1`] = `
+Array [
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "commandCalled": "/play",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "created",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "meta": Object {
+            "name": "channel",
+            "version": "1",
+          },
+          "playlists": Array [
+            "totally-random-uuid-0",
+          ],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "date": 949363200000,
+          "meta": Object {
+            "name": "playlist",
+            "version": "1",
+          },
+          "tracks": Array [],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "date": 949363200000,
+          "meta": Object {
+            "name": "playlist",
+            "version": "1",
+          },
+          "tracks": Array [
+            Object {
+              "author": Object {
+                "id": "testAuthorId",
+                "meta": Object {
+                  "name": "author",
+                  "version": "1",
+                },
+                "username": "testuser",
+              },
+              "link": "https://test.com",
+              "meta": Object {
+                "name": "track",
+                "version": "1",
+              },
+              "name": "[test (1:10)](https://test.com) [<@testAuthorId>]",
+            },
+          ],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"[test (1:10)](https://test.com) [<@testAuthorId>] has been added to the queue\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"Now playing: [test (1:10)](https://test.com) [<@testAuthorId>]\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 1,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "commandCalled": "/play",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 1,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "found",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 1,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "event": EventFake {
+          "message": JMessageFake {
+            "_reactions": Array [],
+            "author": Object {
+              "bot": false,
+              "id": "testAuthorId",
+              "username": "testuser",
+            },
+            "channelId": "testChannelId",
+            "content": "/play test",
+          },
+          "timestamp": 949363200000,
+        },
+        "item": Object {
+          "date": 949363200000,
+          "meta": Object {
+            "name": "playlist",
+            "version": "1",
+          },
+          "tracks": Array [
+            Object {
+              "author": Object {
+                "id": "testAuthorId",
+                "meta": Object {
+                  "name": "author",
+                  "version": "1",
+                },
+                "username": "testuser",
+              },
+              "link": "https://test.com",
+              "meta": Object {
+                "name": "track",
+                "version": "1",
+              },
+              "name": "[test (1:10)](https://test.com) [<@testAuthorId>]",
+            },
+            Object {
+              "author": Object {
+                "id": "testAuthorId",
+                "meta": Object {
+                  "name": "author",
+                  "version": "1",
+                },
+                "username": "testuser",
+              },
+              "link": "https://test2.com",
+              "meta": Object {
+                "name": "track",
+                "version": "1",
+              },
+              "name": "[test2 (1:10)](https://test2.com) [<@testAuthorId>]",
+            },
+          ],
+        },
+        "result": Object {
+          "playlist": "trackingEvent",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 1,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"[test2 (1:10)](https://test2.com) [<@testAuthorId>] has been added to the queue\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 5,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "player": "idle",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 5,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"Now playing: [test2 (1:10)](https://test2.com) [<@testAuthorId>]\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 10,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "player": "idle",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 10,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"End of playlist, will disconnect in 5 minutes.\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+]
+`;

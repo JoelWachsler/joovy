@@ -6,16 +6,19 @@ on:
     tags-ignore:
       - '**'
 jobs:
-  test:
+  test-core:
     runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: ./core
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Setup build tools
         run: |
           sudo apt-get update
           sudo apt-get install build-essential autoconf automake g++ libtool -y
-
-      - name: Checkout
-        uses: actions/checkout@v2
 
       - name: Setup node
         uses: actions/setup-node@v2
@@ -30,7 +33,7 @@ jobs:
         id: yarn-cache
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-modules-core-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
@@ -39,16 +42,19 @@ jobs:
       - name: Run tests
         run: yarn test
 
-  lint:
+  lint-core:
     runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: ./core
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Setup build tools
         run: |
           sudo apt-get update
           sudo apt-get install build-essential autoconf automake g++ libtool -y
-
-      - name: Checkout
-        uses: actions/checkout@v2
 
       - name: Setup node
         uses: actions/setup-node@v2
@@ -63,7 +69,7 @@ jobs:
         id: yarn-cache
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-modules-core-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
@@ -71,3 +77,85 @@ jobs:
 
       - name: Lint
         run: yarn lint
+
+  lint-gateway:
+    runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: ./gateway
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install build-essential autoconf automake g++ libtool -y
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Setup yarn
+        run: npm install -g yarn
+
+      - name: Setup cache
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-gateway-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn
+
+      - name: Lint
+        run: yarn lint
+
+  build-docker-image-core:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Context for Buildx
+        id: buildx-context
+        run: docker context create builders
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          endpoint: builders
+
+      - name: Build and push image
+        uses: docker/build-push-action@v2
+        with:
+          tags: ${{ secrets.REGISTRY }}/core:${{ github.sha }}
+          cache-from: type=registry,ref=${{ secrets.REGISTRY }}/core:latest
+          cache-to: type=inline
+          context: ./core
+
+  build-docker-image-gateway:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Context for Buildx
+        id: buildx-context
+        run: docker context create builders
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          endpoint: builders
+
+      - name: Build and push image
+        uses: docker/build-push-action@v2
+        with:
+          tags: ${{ secrets.REGISTRY }}/gateway:${{ github.sha }}
+          cache-from: type=registry,ref=${{ secrets.REGISTRY }}/gateway:latest
+          cache-to: type=inline
+          context: ./gateway

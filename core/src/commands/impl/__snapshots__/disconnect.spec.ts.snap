@@ -1,0 +1,375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should disconnect, reconnect and disconnect again without any problem 1`] = `
+Array [
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "commandCalled": "/play",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "created",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "trackingEvent",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "trackingEvent",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "trackingEvent",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"[test (1:10)](https://test.com) [<@testAuthorId>] has been added to the queue\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"Now playing: [test (1:10)](https://test.com) [<@testAuthorId>]\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 1,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "commandCalled": "/disconnect",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 1,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "kafka": Object {
+          "message": Object {
+            "meta": Object {
+              "messageKey": Object {
+                "channelId": "testChannelId",
+                "messageId": "0",
+              },
+              "name": "disconnect",
+              "version": "1",
+            },
+            "reason": "manual disconnect by: {\\"username\\":\\"testuser\\",\\"bot\\":false,\\"id\\":\\"testAuthorId\\"}",
+          },
+          "topic": "joovy-disconnect",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "disconnect": "test",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "disconnected",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "store": Object {
+          "event": "removed",
+          "id": "testChannelId",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 2,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"Bye!\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 3,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "commandCalled": "/play",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 3,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "created",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 3,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "trackingEvent",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 3,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "trackingEvent",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 3,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "playlist": "trackingEvent",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 3,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"[test (1:10)](https://test.com) [<@testAuthorId>] has been added to the queue\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 3,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"Now playing: [test (1:10)](https://test.com) [<@testAuthorId>]\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 8,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "player": "idle",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 8,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"End of playlist, will disconnect in 5 minutes.\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+]
+`;
+
+exports[`should emit disconnect event 1`] = `
+Array [
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "commandCalled": "/disconnect",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "kafka": Object {
+          "message": Object {
+            "meta": Object {
+              "messageKey": Object {
+                "channelId": "testChannelId",
+                "messageId": "0",
+              },
+              "name": "disconnect",
+              "version": "1",
+            },
+            "reason": "manual disconnect by: {\\"username\\":\\"testuser\\",\\"bot\\":false,\\"id\\":\\"testAuthorId\\"}",
+          },
+          "topic": "joovy-disconnect",
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`should not crash if disconnecting when not connected 1`] = `
+Array [
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "disconnect": "test",
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "store": Object {
+          "event": "removed",
+          "id": "testChannelId",
+        },
+      },
+    },
+  },
+  TestMessageValue {
+    "frame": 0,
+    "notification": Object {
+      "kind": "N",
+      "value": Object {
+        "messageSent": "{
+  \\"title\\": null,
+  \\"type\\": \\"rich\\",
+  \\"description\\": \\"Bye!\\",
+  \\"url\\": null,
+  \\"timestamp\\": null,
+  \\"color\\": null,
+  \\"fields\\": [],
+  \\"thumbnail\\": null,
+  \\"image\\": null,
+  \\"author\\": null,
+  \\"footer\\": null
+}",
+      },
+    },
+  },
+]
+`;
